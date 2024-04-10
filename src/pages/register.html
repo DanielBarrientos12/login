@@ -9,11 +9,11 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="bg-pack-train bg-cover bg-center bg-no-repeat w-full h-full md:bg-cover">
     <main>
-        <section class="bg-img w-full h-full">
+        <section>
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-white">
+                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-white text-shadow">
                     <!-- <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                         alt="logo"> -->
                     Registro
@@ -25,7 +25,7 @@
                             class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             Crear una cuenta.
                         </h1>
-                        <form class="space-y-4 md:space-y-6" action="#">
+                        <form name="loginForm" action="" method="post" class="space-y-4 md:space-y-6">
                             <div>
                                 <label for="email"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo</label>
@@ -42,8 +42,9 @@
                             </div>
                             <div>
                                 <label for="confirm-password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirmar contraseña</label>
-                                <input type="confirm-password" name="confirm-password" id="confirm-password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirmar
+                                    contraseña</label>
+                                <input type="password" name="confirm-password" id="confirm-password"
                                     placeholder="••••••••"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required="">
@@ -64,8 +65,9 @@
                                 class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 Crear cuenta</button>
                             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                                Ya tienes una cuenta? 
-                                <a href="../index.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                                Ya tienes una cuenta?
+                                <a href="../index.html"
+                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">
                                     Inicia sesión aquí</a>
                             </p>
                         </form>
@@ -74,6 +76,27 @@
             </div>
         </section>
     </main>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBy941x3OrZbP0pezoQ6AJVtYbsC2Q48UA",
+            authDomain: "prueba-login-dcc9c.firebaseapp.com",
+            projectId: "prueba-login-dcc9c",
+            storageBucket: "prueba-login-dcc9c.appspot.com",
+            messagingSenderId: "899388346733",
+            appId: "1:899388346733:web:04927735ad42adee324a64",
+            measurementId: "G-94RRVSRXQP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script type="module" src="../js/register.js"></script>
 </body>
 
 </html>

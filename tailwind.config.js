@@ -23,6 +23,9 @@ module.exports = {
           "950": "#172554"
         }
       },
+      backgroundImage: {
+        'pack-train': "url('/src/images/bg-login.jpg')",
+      },
       // Añade aquí tus familias de fuentes personalizadas
       fontFamily: {
         'body': [
